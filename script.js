@@ -65,3 +65,9 @@ const best = students.filter((element)=>{
     return element
 }) 
 console.log(best)
+
+const bestId = students.filter((element)=>{
+    if(element.Grade >= 70 && element.id >= 120)
+    return element
+}) 
+console.log(bestId)
