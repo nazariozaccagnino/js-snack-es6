@@ -54,3 +54,8 @@ const students = [
         Grade : 84
     },
 ]
+
+const plates = students.map((element)=>{    
+    return element.Name.toUpperCase()
+})
+console.log(plates)
