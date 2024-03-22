@@ -59,3 +59,9 @@ const plates = students.map((element)=>{
     return element.Name.toUpperCase()
 })
 console.log(plates)
+
+const best = students.filter((element)=>{
+    if(element.Grade >= 70)
+    return element
+}) 
+console.log(best)
