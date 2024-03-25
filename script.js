@@ -84,7 +84,7 @@ Wilier Triestina Zero.6, 6,1
 
 */
 
-const bikes = [
+/* const bikes = [
     {
         model : 'Canyon Ultimate CF',
         weight : 6700,
@@ -116,9 +116,51 @@ const lightest = bikesClone.reduce(
 
 console.log(`La bici piu\' leggera è la ${lightest.model} che pesa ${lightest.weight} grammi`);
  
+*/
 
+/* Snack 4
+Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
+Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+*/
 
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
 
+let serieA = [
+    {
+        team : 'Juventus',
+        pts : 0,
+        fouls : 0,
+    },
+    {
+        team : 'Roma',
+        pts : 0,
+        fouls : 0,
+    },
+    {
+        team : 'Inter',
+        pts : 0,
+        fouls : 0,
+    },
+    {
+        team : 'Milan',
+        pts : 0,
+        fouls : 0,
+    },
+    {
+        team : 'Napoli',
+        pts : 0,
+        fouls : 0,
+    },
+    {
+        team : 'Atalanta',
+        pts : 0,
+        fouls : 0,
+    },
+]
 
-
-  
+const serieAclone = [...serieA]
+console.log(serieAclone);
