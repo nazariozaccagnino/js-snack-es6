@@ -164,3 +164,19 @@ let serieA = [
 
 const serieAclone = [...serieA]
 console.log(serieAclone);
+
+let newPts = getRndInteger(1, 30)
+// console.log(newPts);
+
+serieAclone.forEach((el) => {
+        el.pts = getRndInteger(1, 30)
+        el.fouls = getRndInteger(1, 30)
+})
+
+let newSerieA = [];
+
+for (let {team, fouls} of serieAclone){
+    newSerieA.push(`La squadra ${team} ha subito ${fouls} falli in questa stagione`)
+
+};
+console.log(newSerieA);
