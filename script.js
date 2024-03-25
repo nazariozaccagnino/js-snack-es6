@@ -102,14 +102,23 @@ const bikes = [
         weight : 6100,
     },
 ];
+console.log(bikes);
 
 const bikesClone = [...bikes]
-// console.log(bikesClone);
-const lightest = [];
+console.log(bikesClone);
+  
+const initialValue = 0;
 
-bikesClone.forEach((el)=>{
-    const {weight} = el;
-    const {model} = el;  
-    lightest.push(model + weight)    
-});
-console.log(lightest);
+const lightest = bikesClone.reduce(
+  (accumulator, currentValue) => accumulator.weight > currentValue.weight ? currentValue : accumulator,
+  bikesClone[0],
+);
+
+console.log(`La bici piu\' leggera è la ${lightest.model} che pesa ${lightest.weight} grammi`);
+ 
+
+
+
+
+
+  
