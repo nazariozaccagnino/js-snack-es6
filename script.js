@@ -86,24 +86,30 @@ Wilier Triestina Zero.6, 6,1
 
 const bikes = [
     {
-        brand : 'Canyon',
-        model : 'Ultimate CF',
+        model : 'Canyon Ultimate CF',
         weight : 6700,
     },
     {
-        brand : 'Rose',
-        model : 'X-Lite Six',
+        model : 'Rose X-Lite Six',
         weight : 6900,
     },
     {
-        brand : 'Sarto',
-        model : 'asola',
+        model : 'Sarto asola',
         weight : 5700,
     },
     {
-        brand : 'Wilier',
-        model : 'Triestina',
+        model : 'Wilier Triestina',
         weight : 6100,
     },
-]
+];
 
+const bikesClone = [...bikes]
+// console.log(bikesClone);
+const lightest = [];
+
+bikesClone.forEach((el)=>{
+    const {weight} = el;
+    const {model} = el;  
+    lightest.push(model + weight)    
+});
+console.log(lightest);
